@@ -1,7 +1,9 @@
 ﻿
 @{
-    ViewBag.Title = "CalNomina";
+    ViewBag.Title = "Nomina Generada";
 }
 
-<h2>CalNomina</h2>
-
+<h3>Ups! Esta nomina ya existe.</h3>
+<div class="alert alert-info" role="alert">La nomina solicitada ya ha sido generada.</div>
+<hr />
+@Html.ActionLink("Ir al listado de Nomias", "Index", "Nominas", new { @class = "btn btn-success" })

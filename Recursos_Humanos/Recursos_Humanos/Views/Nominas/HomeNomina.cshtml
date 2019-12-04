@@ -1,7 +1,53 @@
 ﻿
+
 @{
-    ViewBag.Title = "HomeNomina";
+    ViewBag.Title = "calcular Nomina";
 }
 
-<h2>HomeNomina</h2>
+<h2>Validar para Nomina</h2>
+
+<div>
+    <h4>Monto actual</h4>
+    <hr />
+    <div class="form-horizontal">
+        <div class="form-group">
+            @Html.Label("Monto Total actual", htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                <font size="12"> @ViewBag.calcuNomina </font>
+            </div>
+        </div>
+
+        <div class="form-group">
+
+            <div class="col-md-10">
+                <p>
+                    Monto total de empleados activos,
+                    ¿Generar nomina a partir de este mes?
+                </p>
+            </div>
+        </div>
+
+        @*<dl class="dl-horizontal">
+                <dt>
+                    @ViewBag.calcuNomina
+
+                </dt>
+                <dt>
+                    Monto total de empleados activos,
+                    ¿Generar nomina a partir de este mes?
+                </dt>
+            </dl>*@
+        <div class="form-group">
+            <div class="col-md-offset-2 col-md-10">
+                @Html.ActionLink("Validar y Generar", "calcuNomina", "Nominas", new { @class = "btn btn-success" })
+                @Html.ActionLink("Cancelar", "Index", "Gestion", new { @class = "btn btn-danger" })
+                @*@Html.ActionLink("Volver", "Index", "Gestion")*@
+            </div>
+        </div>
+    </div>
+</div>
+
+<div>
+
+</div>
 

@@ -1,7 +1,48 @@
 ﻿
+@model IEnumerable<Recursos_Humanos.Models.Nomina>
+
 @{
-    ViewBag.Title = "Index";
+    ViewBag.Title = "Listado Nomina";
 }
 
-<h2>Index</h2>
+<h2>Listado de Nominas</h2>
+
+<p>
+    @Html.ActionLink("Generar Nomina", "HomeNomina", "Nominas")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Año)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Mes)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Monto_Total)
+        </th>
+        <th></th>
+    </tr>
+
+    @foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Año)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Mes)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Monto_Total)
+            @ViewBag.NominaSum
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.Id_Nomina }) |
+            @Html.ActionLink("Details", "Details", new { id=item.Id_Nomina }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.Id_Nomina })
+        </td>
+    </tr>
+}
+
+</table>
 
