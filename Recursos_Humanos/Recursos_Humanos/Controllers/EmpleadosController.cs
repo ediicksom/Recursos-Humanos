@@ -6,10 +6,9 @@ using System.Linq;
 using System.Net;
 using System.Web;
 using System.Web.Mvc;
-using ProyectoFinal.Context;
-using ProyectoFinal.Models;
 
-namespace ProyectoFinal.Controllers
+
+namespace Recursos_Humanos.Controllers
 {
     public class EmpleadosController : Controller
     {
