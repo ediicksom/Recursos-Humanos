@@ -1,7 +1,74 @@
-﻿
+﻿@model IEnumerable<ProyectoFinal.Models.Vacacion>
+
 @{
-    ViewBag.Title = "Index";
+	ViewBag.Title = "Index";
 }
 
-<h2>Index</h2>
+<h2>Listado de Vacaciones por empleado</h2>
+<hr />
+<div class="form-group">
 
+
+	@Html.ActionLink("Agregar nuevo", "Create", "Vacaciones", new { @class = "btn btn-primary" })
+
+</div>
+<hr />
+<table class="table">
+	<tr>
+		<th>
+			@Html.DisplayNameFor(model => model.Empleado.CodigoEmpleado)
+		</th>
+		<th>
+			@Html.DisplayNameFor(model => model.Empleado.Nombre_Empleado)
+		</th>
+		<th>
+			@Html.DisplayNameFor(model => model.Empleado.Apellido)
+		</th>
+		<th>
+			@Html.DisplayNameFor(model => model.Inicio_Vacaciones)
+		</th>
+		<th>
+			@Html.DisplayNameFor(model => model.Fin_Vacaciones)
+		</th>
+		<th>
+			@Html.DisplayNameFor(model => model.Año)
+		</th>
+		<th>
+			@Html.DisplayNameFor(model => model.Comentario)
+		</th>
+		<th></th>
+	</tr>
+
+	@foreach (var item in Model)
+	{
+		<tr>
+			<td>
+				@Html.DisplayFor(modelItem => item.Empleado.CodigoEmpleado)
+			</td>
+			<td>
+				@Html.DisplayFor(modelItem => item.Empleado.Nombre_Empleado)
+			</td>
+			<td>
+				@Html.DisplayFor(modelItem => item.Empleado.Apellido)
+			</td>
+			<td>
+				@Html.DisplayFor(modelItem => item.Inicio_Vacaciones)
+			</td>
+			<td>
+				@Html.DisplayFor(modelItem => item.Fin_Vacaciones)
+			</td>
+			<td>
+				@Html.DisplayFor(modelItem => item.Año)
+			</td>
+			<td>
+				@Html.DisplayFor(modelItem => item.Comentario)
+			</td>
+			<td>
+				@Html.ActionLink("Editar", "Edit", new { id = item.Id_Vacacion }) |
+				@Html.ActionLink("Detalles", "Details", new { id = item.Id_Vacacion }) |
+				@Html.ActionLink("Eliminar", "Delete", new { id = item.Id_Vacacion })
+			</td>
+		</tr>
+	}
+
+</table>

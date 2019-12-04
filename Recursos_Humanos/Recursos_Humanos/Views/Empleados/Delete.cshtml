@@ -1,7 +1,96 @@
-﻿
+﻿@model ProyectoFinal.Models.Empleado
+
 @{
-    ViewBag.Title = "Delete";
+	ViewBag.Title = "Eliminar";
 }
 
-<h2>Delete</h2>
+<h2>¿Seguro que desea eliminar este registro?</h2>
+<hr />
+<div>
+	<h4>Empleado</h4>
+	<hr />
+	<dl class="dl-horizontal">
+		@*<dt>
+				@Html.DisplayNameFor(model => model.Cargo.Nombre_Cargo)
+			</dt>
 
+			<dd>
+				@Html.DisplayFor(model => model.Cargo.Nombre_Cargo)
+			</dd>
+
+			<dt>
+				@Html.DisplayNameFor(model => model.Departamento.Codigo_Depto)
+			</dt>
+
+			<dd>
+				@Html.DisplayFor(model => model.Departamento.Codigo_Depto)
+			</dd>*@
+
+		<dt>
+			@Html.DisplayNameFor(model => model.CodigoEmpleado)
+		</dt>
+
+		<dd>
+			@Html.DisplayFor(model => model.CodigoEmpleado)
+		</dd>
+
+		<dt>
+			@Html.DisplayNameFor(model => model.Nombre_Empleado)
+		</dt>
+
+		<dd>
+			@Html.DisplayFor(model => model.Nombre_Empleado)
+		</dd>
+
+		<dt>
+			@Html.DisplayNameFor(model => model.Apellido)
+		</dt>
+
+		<dd>
+			@Html.DisplayFor(model => model.Apellido)
+		</dd>
+
+		<dt>
+			@Html.DisplayNameFor(model => model.Telefono)
+		</dt>
+
+		<dd>
+			@Html.DisplayFor(model => model.Telefono)
+		</dd>
+
+		<dt>
+			@Html.DisplayNameFor(model => model.FechaIngreso)
+		</dt>
+
+		<dd>
+			@Html.DisplayFor(model => model.FechaIngreso)
+		</dd>
+
+		<dt>
+			@Html.DisplayNameFor(model => model.Salario)
+		</dt>
+
+		<dd>
+			@Html.DisplayFor(model => model.Salario)
+		</dd>
+
+		<dt>
+			@Html.DisplayNameFor(model => model.status)
+		</dt>
+
+		<dd>
+			@Html.DisplayFor(model => model.status)
+		</dd>
+
+	</dl>
+
+	@using (Html.BeginForm())
+	{
+		@Html.AntiForgeryToken()
+
+		<div class="form-actions no-color">
+			<input type="submit" value="Eliminar" class="btn btn-danger" /> |
+			@Html.ActionLink("Cancelar", "Index", "Empleados", new { @class = "btn btn-default" })
+		</div>
+	}
+</div>

@@ -187,7 +187,7 @@
     <Content Include="Views\Empleados\EmpInactivos.cshtml" />
     <Content Include="Views\Empleados\Index.cshtml" />
     <Content Include="Views\Empleados\Error.cshtml" />
-    <Content Include="Views\Empleados\Informe.cshtml" />
+    <Content Include="Views\Empleados\Informe_EntradaMes.cshtml" />
     <Content Include="Views\Empleados\View.cshtml" />
     <Content Include="Views\Cargos\Create.cshtml" />
     <Content Include="Views\Cargos\Delete.cshtml" />
@@ -223,6 +223,7 @@
     <Content Include="Views\Vacaciones\Delete.cshtml" />
     <Content Include="Views\Vacaciones\Edit.cshtml" />
     <Content Include="Views\Vacaciones\Index.cshtml" />
+    <Content Include="Views\Empleados\Informe_EntradaMesLista.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

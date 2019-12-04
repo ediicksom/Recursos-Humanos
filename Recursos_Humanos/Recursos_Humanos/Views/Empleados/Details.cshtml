@@ -1,7 +1,90 @@
-﻿
+﻿@model ProyectoFinal.Models.Empleado
+
 @{
-    ViewBag.Title = "Details";
+	ViewBag.Title = "Detalles Empleado";
 }
 
-<h2>Details</h2>
+<h2>Detalles Empleado</h2>
+<hr />
+<div>
+	<h4>Empleado</h4>
+	<hr />
+	<dl class="dl-horizontal">
+		@*<dt>
+				@Html.DisplayNameFor(model => model.Cargo.Nombre_Cargo)
+			</dt>
 
+			<dd>
+				@Html.DisplayFor(model => model.Cargo.Nombre_Cargo)
+			</dd>
+
+			<dt>
+				@Html.DisplayNameFor(model => model.Departamento.Codigo_Depto)
+			</dt>
+
+			<dd>
+				@Html.DisplayFor(model => model.Departamento.Codigo_Depto)
+			</dd>*@
+
+		<dt>
+			@Html.DisplayNameFor(model => model.CodigoEmpleado)
+		</dt>
+
+		<dd>
+			@Html.DisplayFor(model => model.CodigoEmpleado)
+		</dd>
+
+		<dt>
+			@Html.DisplayNameFor(model => model.Nombre_Empleado)
+		</dt>
+
+		<dd>
+			@Html.DisplayFor(model => model.Nombre_Empleado)
+		</dd>
+
+		<dt>
+			@Html.DisplayNameFor(model => model.Apellido)
+		</dt>
+
+		<dd>
+			@Html.DisplayFor(model => model.Apellido)
+		</dd>
+
+		<dt>
+			@Html.DisplayNameFor(model => model.Telefono)
+		</dt>
+
+		<dd>
+			@Html.DisplayFor(model => model.Telefono)
+		</dd>
+
+		<dt>
+			@Html.DisplayNameFor(model => model.FechaIngreso)
+		</dt>
+
+		<dd>
+			@Html.DisplayFor(model => model.FechaIngreso)
+		</dd>
+
+		<dt>
+			@Html.DisplayNameFor(model => model.Salario)
+		</dt>
+
+		<dd>
+			@Html.DisplayFor(model => model.Salario)
+		</dd>
+
+		<dt>
+			@Html.DisplayNameFor(model => model.status)
+		</dt>
+
+		<dd>
+			@Html.DisplayFor(model => model.status)
+		</dd>
+
+	</dl>
+</div>
+<p>
+	@Html.ActionLink("Editar", "Edit", new { id = Model.Id_Empleado }) |
+	@Html.ActionLink("Volver al listado", "Index")
+</p>

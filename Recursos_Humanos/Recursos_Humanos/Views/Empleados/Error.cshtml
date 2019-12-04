@@ -1,7 +1,9 @@
 ﻿
 @{
-    ViewBag.Title = "Error";
+	ViewBag.Title = "Error";
 }
 
-<h2>Error</h2>
-
+<h3>Ups! No encontrado.</h3>
+<div class="alert alert-info" role="alert">No se ha encontrado registros.</div>
+<hr />
+@Html.ActionLink("Ir al listado de Empleados", "Index", "Empleados", new { @class = "btn btn-primary" })

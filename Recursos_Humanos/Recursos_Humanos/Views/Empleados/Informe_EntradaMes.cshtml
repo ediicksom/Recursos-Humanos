@@ -1,0 +1,42 @@
+﻿@*@model ProyectoFinal.Models.Empleado*@
+
+@{
+	ViewBag.Title = "Informe Entrada Mes";
+}
+
+<h2>Informe Entrada por Mes</h2>
+
+@using (Html.BeginForm("Informe_EntradaMesLista", "Empleados"))
+{
+	@Html.AntiForgeryToken()
+
+	<div class="form-horizontal">
+
+		<h4>Buscar</h4>
+		<hr />
+
+		@*<form action="Informe_EntradaMesLista" method="post">*@
+		<div class="form-group">
+			<label>Año: </label>
+			<input type="number" class="form-control" id="ano" name="ano" value="" placeholder="Inserte Año de busqueda" />
+		</div>
+
+		<div class="form-group">
+			<label>Mes: </label>
+			<input type="number" class="form-control" id="mes" name="mes" value="" placeholder="Inserte Mes de busqueda" />
+		</div>
+
+		<div class="form-group">
+			<div class="col-md-offset-2 col-md-10">
+				<input type="submit" value="Buscar" class="btn btn-success" />
+				@* @Html.ActionLink("Buscar", "Informe_EntradaMesLista", "Empleados", new { @class = "btn btn-success" })*@
+				@Html.ActionLink("Cancelar", "Index", "Gestion", new { @class = "btn btn-danger" })
+			</div>
+		</div>
+		@*</form>*@
+	</div>
+}
+
+<div>
+	@Html.ActionLink("Back to List", "Index")
+</div>
