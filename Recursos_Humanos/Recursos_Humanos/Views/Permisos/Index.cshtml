@@ -1,7 +1,72 @@
-﻿
+﻿@model IEnumerable<ProyectoFinal.Models.Permiso>
+
 @{
-    ViewBag.Title = "Index";
+	ViewBag.Title = "Listaro Permisos";
 }
 
-<h2>Index</h2>
+<h2>Listado de Permisos por empleados</h2>
 
+<hr />
+<div class="form-group">
+
+
+	@Html.ActionLink("Crear Permiso", "Create", "Permisos", new { @class = "btn btn-primary" })
+
+</div>
+<hr />
+<table class="table">
+	<thead>
+		<tr>
+			<th>
+				@Html.DisplayNameFor(model => model.Empleado.CodigoEmpleado)
+			</th>
+			<th>
+				@Html.DisplayNameFor(model => model.Empleado.Nombre_Empleado)
+			</th>
+			<th>
+				@Html.DisplayNameFor(model => model.Empleado.Apellido)
+			</th>
+			<th>
+				@Html.DisplayNameFor(model => model.Inicio_Permiso)
+			</th>
+			<th>
+				@Html.DisplayNameFor(model => model.Fin_Permiso)
+			</th>
+			<th>
+				@Html.DisplayNameFor(model => model.Comentario)
+			</th>
+			@*<th></th>*@
+		</tr>
+	</thead>
+
+	<tbody>
+		@foreach (var item in Model)
+		{
+			<tr>
+				<td>
+					@Html.DisplayFor(modelItem => item.Empleado.CodigoEmpleado)
+				</td>
+				<td>
+					@Html.DisplayFor(modelItem => item.Empleado.Nombre_Empleado)
+				</td>
+				<td>
+					@Html.DisplayFor(modelItem => item.Empleado.Apellido)
+				</td>
+				<td>
+					@Html.DisplayFor(modelItem => item.Inicio_Permiso)
+				</td>
+				<td>
+					@Html.DisplayFor(modelItem => item.Fin_Permiso)
+				</td>
+				<td>
+					@Html.DisplayFor(modelItem => item.Comentario)
+				</td>
+				@*<td>
+						@Html.ActionLink("Editar", "Edit", new { id = item.Id_Permiso }) |
+						@Html.ActionLink("Detalles", "Details", new { id = item.Id_Permiso }) |
+						@Html.ActionLink("Eliminar", "Delete", new { id = item.Id_Permiso })
+					</td>*@
+			</tr>
+		}
+	</tbody>
+</table>
