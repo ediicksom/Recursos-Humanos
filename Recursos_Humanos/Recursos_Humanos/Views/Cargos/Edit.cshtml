@@ -1,7 +1,37 @@
-﻿
+﻿@model Recursos_Humanos.Models.Cargo
+
 @{
-    ViewBag.Title = "Edit";
+    ViewBag.Title = "Editar cargo";
 }
 
-<h2>Edit</h2>
+<h2>Editar Cargo</h2>
 
+@using (Html.BeginForm())
+{
+@Html.AntiForgeryToken()
+
+<div class="form-horizontal">
+    <h4>Cargo</h4>
+    <hr />
+    @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+    @Html.HiddenFor(model => model.Id_Cargo)
+
+    <div class="form-group">
+        @Html.LabelFor(model => model.Nombre_Cargo, htmlAttributes: new { @class = "control-label col-md-2" })
+        <div class="col-md-10">
+            @Html.EditorFor(model => model.Nombre_Cargo, new { htmlAttributes = new { @class = "form-control" } })
+            @Html.ValidationMessageFor(model => model.Nombre_Cargo, "", new { @class = "text-danger" })
+        </div>
+    </div>
+
+    <div class="form-group">
+        <div class="col-md-offset-2 col-md-10">
+            <input type="submit" value="Guardar cambios" class="btn btn-success" />
+        </div>
+    </div>
+</div>
+}
+
+<div>
+    @Html.ActionLink("Volver al listado", "Index")
+</div>
