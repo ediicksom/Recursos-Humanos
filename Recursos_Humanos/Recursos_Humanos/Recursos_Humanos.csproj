@@ -121,7 +121,15 @@
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Context\GestionContext.cs" />
+    <Compile Include="Controllers\CargosController.cs" />
+    <Compile Include="Controllers\DepartamentosController.cs" />
+    <Compile Include="Controllers\EmpleadosController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\LicenciasController.cs" />
+    <Compile Include="Controllers\NominasController.cs" />
+    <Compile Include="Controllers\PermisosController.cs" />
+    <Compile Include="Controllers\Salida_EmpleadoController.cs" />
+    <Compile Include="Controllers\VacacionesController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -167,6 +175,14 @@
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="Models\" />
+    <Folder Include="Views\Cargos\" />
+    <Folder Include="Views\Departamentos\" />
+    <Folder Include="Views\Empleados\" />
+    <Folder Include="Views\Licencias\" />
+    <Folder Include="Views\Nominas\" />
+    <Folder Include="Views\Permisos\" />
+    <Folder Include="Views\Salida_Empleado\" />
+    <Folder Include="Views\Vacaciones\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff2" />
